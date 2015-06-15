@@ -226,7 +226,7 @@
             [_doneButton setTitleTextAttributes:[NSDictionary dictionary] forState:UIControlStateNormal];
             [_doneButton setTitleTextAttributes:[NSDictionary dictionary] forState:UIControlStateHighlighted];
         }
-        self.navigationItem.rightBarButtonItem = _doneButton;
+//        self.navigationItem.rightBarButtonItem = _doneButton;
     } else {
         // We're not first so show back button
         UIViewController *previousViewController = [self.navigationController.viewControllers objectAtIndex:self.navigationController.viewControllers.count-2];
@@ -242,7 +242,7 @@
             [newBackButton setTitleTextAttributes:[NSDictionary dictionary] forState:UIControlStateHighlighted];
         }
         _previousViewControllerBackButton = previousViewController.navigationItem.backBarButtonItem; // remember previous
-        previousViewController.navigationItem.backBarButtonItem = newBackButton;
+//        previousViewController.navigationItem.backBarButtonItem = newBackButton;
         
         if(_showCloseButtonOnGrid){
             //Force show done button
@@ -256,7 +256,7 @@
                 [_doneButton setTitleTextAttributes:[NSDictionary dictionary] forState:UIControlStateNormal];
                 [_doneButton setTitleTextAttributes:[NSDictionary dictionary] forState:UIControlStateHighlighted];
             }
-            self.navigationItem.rightBarButtonItem = _doneButton;
+//            self.navigationItem.rightBarButtonItem = _doneButton;
         }
     }
 
