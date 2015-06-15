@@ -1097,6 +1097,8 @@
 		self.title = nil;
 	}
 	
+    self.title = @"Galerija";
+    
 	// Buttons
 	_previousButton.enabled = (_currentPageIndex > 0);
 	_nextButton.enabled = (_currentPageIndex < numberOfPhotos - 1);
