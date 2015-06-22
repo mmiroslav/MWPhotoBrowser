@@ -406,6 +406,8 @@
         _viewHasAppearedInitially = YES;
     }
 
+    [self styleNavigationViewController];
+
 }
 
 - (void)viewWillDisappear:(BOOL)animated {
@@ -455,6 +457,13 @@
 - (void)didMoveToParentViewController:(UIViewController *)parent {
     if (!parent) _hasBelongedToViewController = YES;
 }
+
+- (void)styleNavigationViewController {
+    [self.navigationController setNavigationBarHidden:NO animated:YES];
+    [self.navigationController.navigationBar setBarStyle:UIBarStyleBlack];
+    [self.tabBarController.tabBar setBarStyle:UIBarStyleBlack];
+}
+
 
 #pragma mark - Nav Bar Appearance
 
