@@ -1199,6 +1199,7 @@
         [_gridController didMoveToParentViewController:self];
     }];
     
+    [self hideBackButton];
 }
 
 - (void)hideGrid {
@@ -1237,7 +1238,26 @@
         [self setControlsHidden:NO animated:YES permanent:NO]; // retrigger timer
     }];
 
+    [self showBackButton];
 }
+
+#pragma mark - Back button
+
+- (void)showBackButton {
+    NSString *bckTitle = @"Nazad"; // TODO localizaton 
+    UIBarButtonItem *backItem = [[UIBarButtonItem alloc] initWithTitle:bckTitle style:UIBarButtonItemStyleDone target:self action:@selector(backBtnTapped)];
+    self.navigationItem.leftBarButtonItem = backItem;
+}
+
+- (void)hideBackButton {
+    self.navigationItem.leftBarButtonItem = nil;
+}
+
+- (void)backBtnTapped {
+    [self performSelector:@selector(doneButtonPressed:) withObject:nil];
+}
+
+
 
 #pragma mark - Control Hiding / Showing
 
