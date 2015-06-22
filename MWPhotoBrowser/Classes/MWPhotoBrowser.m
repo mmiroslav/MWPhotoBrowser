@@ -462,6 +462,7 @@
     [self.navigationController setNavigationBarHidden:NO animated:YES];
     [self.navigationController.navigationBar setBarStyle:UIBarStyleBlack];
     [self.tabBarController.tabBar setBarStyle:UIBarStyleBlack];
+    [self.navigationController.navigationBar setBackgroundImage:[UIImage imageNamed:@"bar_image_black"] forBarMetrics:UIBarMetricsDefault];
 }
 
 
