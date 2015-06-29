@@ -1254,8 +1254,14 @@
 #pragma mark - Back button
 
 - (void)showBackButton {
-    NSString *bckTitle = @"Nazad"; // TODO localizaton 
+    NSString *bckTitle = @"Nazad"; // TODO localizaton
+    UIColor *redColor = [UIColor colorWithRed:(236.0/255.0)
+                                        green:(26.0/255.0)
+                                         blue:(59.0/255.0)
+                                        alpha:1];
     UIBarButtonItem *backItem = [[UIBarButtonItem alloc] initWithTitle:bckTitle style:UIBarButtonItemStyleDone target:self action:@selector(backBtnTapped)];
+    [backItem setBackgroundImage:[UIImage imageNamed:@"back_icon_red"] forState:UIControlStateNormal barMetrics:UIBarMetricsDefault];
+    [backItem setTintColor:redColor];
     self.navigationItem.leftBarButtonItem = backItem;
 }
 
