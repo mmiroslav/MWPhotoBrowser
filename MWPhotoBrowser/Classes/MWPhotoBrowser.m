@@ -308,11 +308,7 @@
             break;
         }
     }
-    if (hideToolbar) {
-        [_toolbar removeFromSuperview];
-    } else {
-        [self.view addSubview:_toolbar];
-    }
+    [_toolbar removeFromSuperview];
     
     // Update nav
 	[self updateNavigation];
